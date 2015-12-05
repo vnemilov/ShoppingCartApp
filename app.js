@@ -9,14 +9,15 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html'
+            templateUrl: 'partial-home.html',
+            controller: 'AllAnimalsCtrl'
         })
 
         // nested list with custom controller
-        .state('home.cats', {
-            url: '/cats',
+        .state('home.animal', {
+            url: '/animal/:name',
             templateUrl: 'partials-home-cats.html',
-            controller: 'CatsListCtrl'
+            controller: 'AnimalCtrl'
         })
 
         // nested list with just some random string data
@@ -27,14 +28,17 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         })
 });
 
-routerApp.controller('DogsListCtrl', function ($scope, $http) {
-  $http.get('dogs.json').success(function(data) {
-    $scope.dogs = data;
+routerApp.controller('AllAnimalsCtrl', function ($scope, $http) {
+  $http.get('animals/animals.json').success(function(data) {
+    $scope.animals = data;
   });
 });
 
-routerApp.controller('CatsListCtrl', function ($scope, $http) {
-  $http.get('cats.json').success(function(data) {
-    $scope.cats = data;
-  });
+
+
+routerApp.controller('AnimalCtrl', function ($scope, $stateParams, $http) {
+    var name = $stateParams.name;
+    $http.get('/animals/' + name+'.json').success(function (data) {
+        $scope.animal = data;
+    });
 });
