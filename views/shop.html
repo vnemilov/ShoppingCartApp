@@ -1,0 +1,29 @@
+<div ui-view class="jumbotron text-center">
+    <a ui-sref="cart">
+        <div>Total:</div>
+    </a><span>{{total}}</span>
+
+</div>
+<!--<div class="jumbotron text-center" ng-repeat="laptop in laptops">-->
+<!--<a ui-sref="laptop({name: '{{laptop.id}}'})">{{laptop.model}}</a>-->
+<!--<button ng-click="this.disabled=true;messagee(laptop)" id={{laptop.price}}>Add to cart ${{laptop.price}}</button>-->
+<!--</div>-->
+
+
+<div class="wrapp">
+    <div class="row container-fluid">
+        <div class="col-md-4" ng-repeat="laptop in laptops | orderBy:'price'">
+            <div class="itemBox">
+                <a ui-sref="laptop({name: '{{laptop.id}}'})" class="deviceName">{{laptop.model}}</a>
+                <a ui-sref="laptop({name: '{{laptop.id}}'})"><img src="{{laptop.images[0]}}" class="itemImage"></a>
+
+                <div><span>Processor:</span> {{laptop.processor}}</div>
+                <div><span>HDD:</span> {{laptop.memory.hdd}}</div>
+                <div><span>RAM:</span> {{laptop.memory.ram}}</div>
+                <div><span>Video:</span> {{laptop.memory.video}}</div>
+                <button class="btn btn-success" ng-click="this.disabled=true;messagee(laptop)">Buy for ${{laptop.price}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

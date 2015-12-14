@@ -1,0 +1,85 @@
+.glyphicon.glyphicon-remove {
+    font-size: 25px;
+    cursor: pointer;
+    color: red;
+}
+
+.glyphicon.glyphicon-shopping-cart {
+    font-size: 25px;
+}
+
+.totalPriceForUnit {
+    width: 60px;
+    float: left;
+}
+
+.rightNavMenu {
+    padding-right: 265px;
+    font-size: 40px;
+}
+
+.leftNavMenu {
+    padding-left: 250px;
+    font-size: 25px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.shopButton {
+    overflow: hidden;
+}
+
+html, body {
+    width: auto;
+    overflow-x: hidden;
+    background-color: #EEE;
+}
+
+.itemBox {
+    height: 200px;
+    margin: 5px;
+    background: white;
+    border-radius: 10px;
+}
+
+.itemBox span {
+    color: #28259E;
+}
+
+.itemBox a {
+    text-decoration: none;
+}
+
+/*.wrapp{*/
+/*background-color: rgba(45, 75, 94, 0.95);*/
+/*}*/
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 5px;
+}
+
+.col-md-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.itemImage {
+    width: 200px;
+    height: 160px;
+    float: left;
+}
+
+.deviceName {
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-top: 5px;
+    display: flex;
+}
+
+/*.container{*/
+/*width:1400px;*/
+/*}*/

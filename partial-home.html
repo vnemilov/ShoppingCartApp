@@ -1,9 +1,0 @@
-<div ui-view class="jumbotron text-center">
-    <a ui-sref=".animal({name: 'cats'})">Cats</a>
-    <a ui-sref=".animal({name: 'dogs'})">Dogs</a>
-</div>
-    <ul>
-        <li ng-repeat="animal in animals">
-            <a ui-sref=".animal({name: '{{animal.name}}'})">{{animal.name}}</a>
-        </li>
-    </ul>
